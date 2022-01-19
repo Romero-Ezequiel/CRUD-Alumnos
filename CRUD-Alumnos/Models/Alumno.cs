@@ -9,7 +9,7 @@ namespace CRUD_Alumnos.Models
     [Table("Alumno")]
     public partial class Alumno
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]

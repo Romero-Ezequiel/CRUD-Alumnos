@@ -133,6 +133,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201190105513_Inicial.cs" />
+    <Compile Include="Migrations\202201190105513_Inicial.Designer.cs">
+      <DependentUpon>202201190105513_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201190107008_inicial-1.cs" />
+    <Compile Include="Migrations\202201190107008_inicial-1.Designer.cs">
+      <DependentUpon>202201190107008_inicial-1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Entity\Alumno.cs" />
@@ -196,6 +204,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202201190105513_Inicial.resx">
+      <DependentUpon>202201190105513_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201190107008_inicial-1.resx">
+      <DependentUpon>202201190107008_inicial-1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
