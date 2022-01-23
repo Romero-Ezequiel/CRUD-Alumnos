@@ -33,6 +33,8 @@ namespace CRUD_Alumnos.Controllers
         [HttpPost]
         public ActionResult Agregar(Alumno a)
         {
+            //Aca consulto sobre si, el modelo que entra es valido y sino es valido 
+            //me retorna la vista y los errores que hay en ValitionSummary
             if (!ModelState.IsValid)
                 return View();
             
