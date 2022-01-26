@@ -141,6 +141,14 @@
     <Compile Include="Migrations\202201190107008_inicial-1.Designer.cs">
       <DependentUpon>202201190107008_inicial-1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202201242328054_Alumnos-02.cs" />
+    <Compile Include="Migrations\202201242328054_Alumnos-02.Designer.cs">
+      <DependentUpon>202201242328054_Alumnos-02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202201242332556_Alumnos-03.cs" />
+    <Compile Include="Migrations\202201242332556_Alumnos-03.Designer.cs">
+      <DependentUpon>202201242332556_Alumnos-03.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Entity\Alumno.cs" />
@@ -211,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202201190107008_inicial-1.resx">
       <DependentUpon>202201190107008_inicial-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201242328054_Alumnos-02.resx">
+      <DependentUpon>202201242328054_Alumnos-02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202201242332556_Alumnos-03.resx">
+      <DependentUpon>202201242332556_Alumnos-03.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -27,5 +27,7 @@ namespace CRUD_Alumnos.Models
         public string Sexo { get; set; }
 
         public DateTime FechaRegistro { get; set; }
+
+
     }
 }

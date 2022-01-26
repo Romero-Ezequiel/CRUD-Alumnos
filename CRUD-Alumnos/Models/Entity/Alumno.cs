@@ -18,6 +18,8 @@ namespace CRUD_Alumnos.Models.Entity
         public DateTime FechaRegistro { get; set; }
 
 
+        public string Domicilio { get; set; }
+
     }
 
 

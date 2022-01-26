@@ -91,3 +91,5 @@ C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD-Alumnos
 C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD_Alumnos.Migrations.Inicial.resources
 C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD-Alumnos.csproj.GenerateResource.cache
 C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD_Alumnos.Migrations.inicial1.resources
+C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD_Alumnos.Migrations.Alumnos02.resources
+C:\Users\PROBOOK\Desktop\GitHub\CRUD-Alumnos\CRUD-Alumnos\obj\Debug\CRUD_Alumnos.Migrations.Alumnos03.resources
