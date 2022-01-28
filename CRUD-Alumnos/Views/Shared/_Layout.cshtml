@@ -5,6 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+
+    @*
+     Con los @Styles.Render() cargo los estilos     
+    *@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -31,6 +35,9 @@
         </div>
     </div>
     <div class="container body-content">
+        @*
+            El @RenderBody() es donde va estar todo el contenido de la pagina    
+        *@
         @RenderBody()
         <hr />
         <footer>
@@ -40,6 +47,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    @*
+     El @RenderSection() es para renderizar una sesion de script
+    *@
     @RenderSection("scripts", required: false)
 </body>
 </html>
