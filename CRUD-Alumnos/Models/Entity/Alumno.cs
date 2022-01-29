@@ -16,11 +16,18 @@ namespace CRUD_Alumnos.Models.Entity
         public int Edad { get; set; }
         public string Sexo { get; set; }
         public DateTime FechaRegistro { get; set; }
-
-
         public string Domicilio { get; set; }
 
+
+        public int Estado { get; set; }
+
+        public string NombreCompleto { get { return Nombres + " " + Apellidos; } }
+
     }
+
+
+
+
 
 
 }
