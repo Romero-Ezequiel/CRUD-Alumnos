@@ -9,7 +9,6 @@ namespace CRUD_Alumnos.Models
     [Table("Alumno")]
     public partial class Alumno
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -26,8 +25,10 @@ namespace CRUD_Alumnos.Models
         [StringLength(1)]
         public string Sexo { get; set; }
 
+        public int? idCiudad { get; set; }
+
         public DateTime FechaRegistro { get; set; }
 
-
+        public virtual Ciudad Ciudad { get; set; }
     }
 }

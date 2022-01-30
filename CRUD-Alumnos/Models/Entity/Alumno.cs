@@ -8,7 +8,7 @@ using CRUD_Alumnos.Models;
 
 namespace CRUD_Alumnos.Models.Entity
 {
-    public class Alumno
+    public  class Alumno
     {
         public int Id { get; set; }
         public string Nombres { get; set; }
