@@ -5,15 +5,17 @@ using System.Linq;
 
 namespace CRUD_Alumnos.Models
 {
-    public partial class ContextoAlumno : DbContext
+    public partial class Model : DbContext
     {
-        public ContextoAlumno()
-            : base("name=ContextoAlumno")
+        public Model()
+            : base("name=Model1")
         {
         }
 
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<Alumno> Alumno { get; set; }
         public virtual DbSet<Ciudad> Ciudad { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,8 +34,9 @@ namespace CRUD_Alumnos.Models
 
             modelBuilder.Entity<Ciudad>()
                 .HasMany(e => e.Alumno)
-                .WithOptional(e => e.Ciudad)
-                .HasForeignKey(e => e.idCiudad);
+                .WithRequired(e => e.Ciudad)
+                .HasForeignKey(e => e.idCiudad)
+                .WillCascadeOnDelete(false);
         }
     }
 }

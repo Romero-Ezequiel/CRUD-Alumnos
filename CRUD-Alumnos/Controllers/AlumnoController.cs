@@ -15,7 +15,7 @@ namespace CRUD_Alumnos.Controllers
             try
             {
                 /*Cuando usamos más de una tabla tenemos que usar transaciones */
-                using (var db = new ModelAlumnos())
+                using (var db = new Model())
                 {
                     //List<Alumno> lista = db.Alumno.Where(a => a.Edad > 18).ToList();  
                     return View(db.Alumno.ToList());
@@ -56,7 +56,7 @@ namespace CRUD_Alumnos.Controllers
                 //Es importante utilizar el using para que abra la conexion
                 //y a la vez que la cierre para que no quede una conexion abierta
                 //y no este consumiendo mucho recursos
-                using (ModelAlumnos db = new ModelAlumnos())
+                using (Model db = new Model())
                 {
                     a.FechaRegistro = DateTime.Now;
 
@@ -80,12 +80,26 @@ namespace CRUD_Alumnos.Controllers
         }
 
 
+        public ActionResult Agregar2()
+        {
+            return View();
+        }
+
+        public ActionResult ListaCiudades()
+        {
+            using (var db = new Model())
+            {
+                //Retorno a vista con todas las ciudad
+                return PartialView(db.Ciudad.ToList());
+            }
+        }
+
 
         public ActionResult Editar(int id)
         {
             try
             {
-                using (var db = new ModelAlumnos())
+                using (var db = new Model())
                 {
                     //Alumno alumnos = db.Alumno.Where(a => a.Id == id).FirstOrDefault();
                     Alumno alum = db.Alumno.Find(id);
@@ -108,7 +122,7 @@ namespace CRUD_Alumnos.Controllers
             {
                 if (!ModelState.IsValid)
                     return View();
-                using (var db = new ModelAlumnos())
+                using (var db = new Model())
                 {
                     Alumno al = db.Alumno.Find(a.Id);
                     al.Nombres = a.Nombres;
@@ -134,7 +148,7 @@ namespace CRUD_Alumnos.Controllers
         {
             try
             {
-                using (var db = new ModelAlumnos())
+                using (var db = new Model())
                 {
                     //Alumno alumnos = db.Alumno.Where(a => a.Id == id).FirstOrDefault();
                     Alumno alum = db.Alumno.Find(id);
@@ -152,7 +166,7 @@ namespace CRUD_Alumnos.Controllers
         {
             try
             {
-                using (var db = new ModelAlumnos())
+                using (var db = new Model())
                 {
                     //Alumno alumnos = db.Alumno.Where(a => a.Id == id).FirstOrDefault();
                     //Primero lo buscamos y si lo encontramos lo eliminamos y luego guardamos
@@ -169,6 +183,16 @@ namespace CRUD_Alumnos.Controllers
             }
         }
 
+
+        public static string NombreDeLaCiudad(int idCiudad)
+        {
+            using (var db = new Model())
+            {
+                //Le indico que busque en la tabla ciudad el codCiudad que le paso
+                //por parametro y que me traiga el nombre de la ciudad
+                return db.Ciudad.Find(idCiudad).Nombre;
+            }
+        }
 
 
     }

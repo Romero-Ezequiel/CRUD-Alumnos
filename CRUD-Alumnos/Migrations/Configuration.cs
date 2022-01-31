@@ -5,14 +5,14 @@ namespace CRUD_Alumnos.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CRUD_Alumnos.Models.ModelAlumnos>
+    internal sealed class Configuration : DbMigrationsConfiguration<CRUD_Alumnos.Models.ContextoAlumno>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CRUD_Alumnos.Models.ModelAlumnos context)
+        protected override void Seed(CRUD_Alumnos.Models.ContextoAlumno context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -37,7 +37,7 @@
     </div>
     <div class="container body-content">
         @*
-            El @RenderBody() es donde va estar todo el contenido de la pagina    
+            El @RenderBody() es donde va estar todo el contenido de la pagina
         *@
         @RenderBody()
         <hr />
@@ -48,10 +48,12 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("scripts", required: false)
+
 
     @*
-     El @RenderSection() es para renderizar una sesion de script
+    El @RenderSection() es para renderizar una sesion de script
     *@
-    @RenderSection("scripts", required: false)
 </body>
 </html>

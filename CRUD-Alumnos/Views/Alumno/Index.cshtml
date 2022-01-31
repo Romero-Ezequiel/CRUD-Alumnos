@@ -13,21 +13,30 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nombres )
+            Nombre
+            @*@Html.DisplayNameFor(model => model.Nombres)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Apellidos)
+            Apellido
+            @*@Html.DisplayNameFor(model => model.Apellidos)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Edad)
+            Edad
+            @*@Html.DisplayNameFor(model => model.Edad)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Sexo)
+            Sexo
+            @*@Html.DisplayNameFor(model => model.Sexo)*@
         </th>
+
+        <th>Ciudad</th>
+
         <th>
-            @Html.DisplayNameFor(model => model.FechaRegistro)
+            Fecha de Registro
+            @*@Html.DisplayNameFor(model => model.FechaRegistro)*@
         </th>
-        <th></th>
+
+        <th>Acciones</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -52,9 +61,20 @@
                     <span>Femenino</span>
                 }
             }
+        </td>
 
+        <td>
+            @*Con esto solamente tengo el codigo de la ciudad pero quiero el nombre
+                entonce puedo utilizar ajax o puedo utilizar el controlador de alumno
+                que hay una funcion que cree para traerme de la entidad ciudad
+                su nombre pero primero le paso el id de la ciudad               
+                @item.idCiudad
+            *@
+
+            @CRUD_Alumnos.Controllers.AlumnoController.NombreDeLaCiudad(item.idCiudad)
 
         </td>
+
         <td>
             @*Muestro la fecha dd/MM/YYYYs*@
             @item.FechaRegistro.ToShortDateString()
@@ -62,7 +82,7 @@
         <td>
             @Html.ActionLink("Editar", "Editar", new { id=item.Id }) |
             @Html.ActionLink("Detalles", "DetallesAlumno", new { id=item.Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new { @class="aEliminar"})
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id }, new { @class="aEliminar"})
         </td>
     </tr>
 }
